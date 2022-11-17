@@ -27,8 +27,7 @@
             <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a href="#" class="text-center my-xl-2"><img src="img/logo.png" id="logo" width="55px"
-                                                                           height="38px"></a>
+                <a href="home" class="text-center my-xl-2"><img src="img/logo.png" id="logo" width="55px" height="38px"></a>
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
 
@@ -44,7 +43,7 @@
                             <h6 class="collapse-header">Đơn hàng</h6>
                             <a class="collapse-item" href="allOrder">Tất cả</a>
                             <a class="collapse-item" href="allOrder?type=process">Xử lý đơn hàng</a>
-                            <a class="collapse-item" href="allOrder?type=status">Tình trạng đơn hàng</a>
+                            <a class="collapse-item" href="allOrder?type=status">Chi tiết vận chuyển</a>
                         </div>
                     </div>
                 </li>

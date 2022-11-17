@@ -53,7 +53,7 @@
                                     <c:if test="${not empty sessionScope.USER}">     
                                         <a href="account" class="nav-link mb-2 text-decoration-none p-2" id="item">Cài đặt tài khoản</a>    
                                     </c:if>                                        <c:if test="${sessionScope.USER.role eq 'SE'}">           
-                                        <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>    
+                                        <a href="sellerPage" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>    
                                     </c:if>                                        <c:if test="${sessionScope.USER.role eq 'AD'}">            
                                         <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý cửa hàng</a>     
                                     </c:if>
@@ -94,7 +94,7 @@
                 <h2 class="pt-4 fw-bold ms-4">${requestScope.POST.title}</h2>
                 <div id="author" class="text-start ms-4">   
                     <jsp:useBean id="date" class="com.nestf.util.FormatPrinter"/> 
-                    <span class="text-muted">Ngày đăng : ${date.printDate(requestScope.POST.postDate)}</span>
+                    <span class="text-muted">Ngày đăng: ${date.printDate(requestScope.POST.postDate)}</span>
                 </div><br>
                 <div id="content" class="pb-2 pe-4">            
                     ${requestScope.POST.content}
@@ -126,6 +126,13 @@
         <c:if test="${sessionScope.USER.role eq 'AD'}">
             <a href="dashboard">
                 <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD" style="left:2.5%">
+                    <i class="fa-solid fa-shop"></i>
+                </button>
+            </a>
+        </c:if>
+                <c:if test="${sessionScope.USER.role eq 'SE'}">
+            <a href="sellerPage">
+                <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
                     <i class="fa-solid fa-shop"></i>
                 </button>
             </a>

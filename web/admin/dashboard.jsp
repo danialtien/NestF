@@ -185,7 +185,7 @@
                     exportFileName: "Bill Status",
                     exportEnabled: true,
                     title: {
-                        text: "Bill Status"
+                        text: "On Processing"
                     },
                     data: [{
                             type: "pie",
@@ -404,7 +404,7 @@
                                     <!-- Dropdown - User Information -->
                                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                          aria-labelledby="userDropdown">
-                                        <a class="dropdown-item" href="adminProfile.jsp">
+                                        <a class="dropdown-item" href="adminProfilePage">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Profile
                                         </a>

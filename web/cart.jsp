@@ -52,7 +52,7 @@
                                     <a href="account" class="nav-link mb-2 text-decoration-none p-2" id="item">Cài đặt tài khoản</a>     
                                 </c:if>                                  
                                 <c:if test="${sessionScope.USER.role eq 'SE'}">     
-                                    <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>   
+                                    <a href="sellerPage" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>   
                                 </c:if>                                     
                                 <c:if test="${sessionScope.USER.role eq 'AD'}">          
                                     <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý cửa hàng</a>             
@@ -106,6 +106,7 @@
                                                             <div id="item" class="d-inline-block col p-3 text-center">                                           
                                                                 <img src="img/voucher.png">
                                                                 <h6 class="text-center">${voucher.voucherType.voucherName}</h6>
+                                                                <span>Trị giá: <span class="fw-bold">${formatPrinter.printMoney(voucher.voucherType.saleValue)}</span></span><br>
                                                                 <p>Hết hạn vào ${voucher.expiredDate}</p>
                                                                 <button type="button" id="buy-button" class="col-6" data-bs-dismiss="modal" onclick="pickVoucher(this)" value="${voucher.voucherType.voucherName}">
                                                                     Sử dụng <input type="hidden" value="${voucher.voucherID}">
@@ -397,6 +398,13 @@
         </button>
         <c:if test="${sessionScope.USER.role eq 'AD'}">
             <a href="dashboard">
+                <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
+                    <i class="fa-solid fa-shop"></i>
+                </button>
+            </a>
+        </c:if>
+        <c:if test="${sessionScope.USER.role eq 'SE'}">
+            <a href="sellerPage">
                 <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
                     <i class="fa-solid fa-shop"></i>
                 </button>

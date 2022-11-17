@@ -34,7 +34,7 @@
                 <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
                     <!-- Sidebar - Brand -->
-                    <a href="sellerPage" class="text-center my-xl-2"><img src="img/logo.png" id="logo" width="55px"
+                    <a href="home" class="text-center my-xl-2"><img src="img/logo.png" id="logo" width="55px"
                                                                           height="38px"></a>
                     <!-- Divider -->
                     <hr class="sidebar-divider my-0">
@@ -55,8 +55,7 @@
                                 <a class="collapse-item order-manager-header" id="process-order" href="#"
                                    onclick="processOrder()">Xử lý đơn hàng</a>
                                 <a class="collapse-item order-manager-header" id="order-status" href="#"
-                                   onclick="orderStatus()">Tình trạng đơn
-                                    hàng</a>
+                                   onclick="orderStatus()">Chi tiết vận chuyển</a>
                             </div>
                         </div>
                     </li>

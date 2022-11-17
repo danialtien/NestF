@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="formatter" class="com.nestf.util.FormatPrinter"/>
 <!DOCTYPE html>
 <html lang="vi">
     <head>
@@ -158,6 +159,7 @@
                                     <div id="item" class="d-inline-block col mb-2">
                                         <img src="img/voucher.png"><br>
                                         <h5>${voucher.voucherType.voucherName}</h5>
+                                        <span>Trị giá: <b>${formatter.printMoney(voucher.voucherType.saleValue)}</b></span>
                                         <p>Hết hạn vào <strong>${voucher.expiredDate}</strong></p>
                                     </div>
                                 </c:forEach>
@@ -175,6 +177,13 @@
         </div>
         <c:if test="${sessionScope.USER.role eq 'AD'}">
             <a href="dashboard">
+                <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
+                    <i class="fa-solid fa-shop"></i>
+                </button>
+            </a>
+        </c:if>
+        <c:if test="${sessionScope.USER.role eq 'SE'}">
+            <a href="sellerPage">
                 <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
                     <i class="fa-solid fa-shop"></i>
                 </button>

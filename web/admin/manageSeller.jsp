@@ -307,7 +307,7 @@
                                     <!-- Dropdown - User Information -->
                                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                          aria-labelledby="userDropdown">
-                                        <a class="dropdown-item" href="adminProfile.jsp">
+                                        <a class="dropdown-item" href="adminProfilePage">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Profile
                                         </a>
@@ -611,9 +611,12 @@
                                                 function closeForm() {
                                                     document.getElementById("container-register").style.display = "none";
                                                 }
-                                                window.onload = function() {
+                <c:if test="${not empty requestScope.PRODUCT_SELLER}">
+                                                window.onload = function () {
                                                     document.getElementById("triggerProductModal").click();
                                                 }
+                </c:if>
+
             </script>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 

@@ -205,8 +205,14 @@ function removeLabel(reason, labelInput) {
 
 function checkEmptyReason(textbox) {
     if (textbox.value === '') {
-        textbox.setCustomValidity
-                ('Lí do hủy đơn không được để trống!');
+        window.createNotification({
+            showDuration: 1500,
+            theme: 'warning'
+        })({
+            title: 'Lỗi',
+            message: 'Lý do hủy đơn không được để trống!'
+        });
+        textbox.setCustomValidity(' ');
     }
 }
 

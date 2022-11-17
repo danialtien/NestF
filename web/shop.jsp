@@ -58,7 +58,7 @@
                                             <a href="account" class="nav-link mb-2 text-decoration-none p-2" id="item">Cài đặt tài khoản</a>    
                                         </c:if>                                    
                                         <c:if test="${sessionScope.USER.role eq 'SE'}">         
-                                            <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>  
+                                            <a href="sellerPage" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý đơn hàng</a>  
                                         </c:if>                                     
                                         <c:if test="${sessionScope.USER.role eq 'AD'}">           
                                             <a href="dashboard" class="nav-link mb-2 text-decoration-none p-2" id="item">Quản lý cửa hàng</a>      
@@ -180,6 +180,13 @@
                     </button>
                 </a>
             </c:if>
+            <c:if test="${sessionScope.USER.role eq 'SE'}">
+            <a href="sellerPage">
+                <button type="button" id="dashboardRedirect" class="btn btn-floating btn-lg rounded-circle text-light position-fixed d-block"  data-bs-toggle="tooltip" data-bs-placement="right" title="DASHBOARD">
+                    <i class="fa-solid fa-shop"></i>
+                </button>
+            </a>
+        </c:if>
             <div>
                 <span id="triggerSuccess" class="d-none" data-bs-toggle="modal" data-bs-target="#success"></span>                     
                 <div class="modal fade" id="success" tabindex="-1" aria-hidden="true">
