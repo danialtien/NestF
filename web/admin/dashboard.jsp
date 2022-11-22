@@ -479,7 +479,7 @@
                                                     <div class="row no-gutters align-items-center">
                                                         <c:set var="percentage" value="${requestScope.TODAY_BILLS eq 0 ? 100 : (1-(requestScope.TODAY_PENDING/requestScope.TODAY_BILLS))*100}"/>
                                                         <div class="col-auto">
-                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">${percentage}%</div>
+                                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">${formatter.noFraction(percentage)}%</div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="progress progress-sm mr-2">
